@@ -24,7 +24,7 @@ echo "9 - Localizar acesso a um determinado arquivo sensível"
 read -n 1 -s n
 case $n in
   0) grep -iE "<script|%3Cscript" $arquivo1 ;;
-  1) read -p "informe o nome do termo para pesquisa: " sql1
+  1) read -p "informe o nome do termo para pesquisa (union|select|insert|drop): " sql1
 	 grep -w -iE $sql1 $arquivo1 ;;
   2) grep -E "\.\./|\.\.%2f" $arquivo1 ;;
   3) read -p "informe o User-Agent para pesquisar: " useragent1
